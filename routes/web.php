@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/user/{id?}', function($id = "Enter your ID") {
+   echo 'Name: '.$id; 
+});
