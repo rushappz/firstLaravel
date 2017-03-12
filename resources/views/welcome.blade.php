@@ -7,7 +7,7 @@ Welcome to Laravel
 @section('content')
 <div class="row">
     <div class="col-md-6">
-        <form action="" method="post">
+        <form action="{{ route('signup') }}" method="post">
             <div class="form-group">
                 <label for="email">Your Email</label>
                 <input type="email" class="form-control" name="email" id="email" />
@@ -21,6 +21,7 @@ Welcome to Laravel
                 <input type="password" class="form-control" name="password" id="password" />
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
+            <input type="hidden" name="_token" value="{{ Session::token() }}"/>
         </form>
     </div>
     <div class="col-md-6">
